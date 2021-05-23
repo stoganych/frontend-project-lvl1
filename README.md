@@ -12,6 +12,8 @@
 make install
 brain-calc
 brain-even
+brain-gcd
+brain-progression
 ```
 
 ### Rules of games
@@ -27,3 +29,7 @@ You need to complete the expression. if you have a right answer, there will be n
 ## brain-gcd
 
 Search the grearest common divisor of two numbers and write the number in console. if you have a right answer, there will be next pair of numbers and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
+
+## brain-progression
+
+Write the lost number in progression. if you have a right answer, there will be next progression and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
