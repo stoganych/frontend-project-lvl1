@@ -14,8 +14,7 @@ const playGame = () => {
     const randomNum = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([randomNum]);
     const answer = readlineSync.question('Your answer: ');
-    if (randomNum % 2 === 0 && answer === 'yes') console.log('Correct!');
-    else if (randomNum % 2 !== 0 && answer === 'no') console.log('Correct!');
+    if (getTryAnswer(randomNum) === answer) console.log('Correct!');
     else {
       return gameLogic.getLoseMessage(answer, getTryAnswer(randomNum), userName);
     }
