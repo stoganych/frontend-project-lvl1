@@ -10,7 +10,7 @@ const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
   gameLogic.getRulesOfGame('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i <= 2; i++) {
+  for (let i = 0; i <= 2; i += 1) {
     const randomNum = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([randomNum]);
     const answer = readlineSync.question('Your answer: ');

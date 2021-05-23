@@ -28,7 +28,7 @@ const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
   gameLogic.getRulesOfGame('What is the result of the expression?');
-  for (let i = 0; i <= 2; i++) {
+  for (let i = 0; i <= 2; i += 1) {
     const firstOperand = gameLogic.getRandomInt(100);
     const secondOperand = gameLogic.getRandomInt(100);
     const operator = getRandomOperator();

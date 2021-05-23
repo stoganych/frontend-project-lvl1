@@ -6,7 +6,7 @@ const createProgression = () => {
   const lengthOfProgression = gameLogic.getRandomInt(15, 5);
   const startOfProgression = gameLogic.getRandomInt(100, 1);
   const progression = [startOfProgression];
-  for (let i = 1; i < lengthOfProgression; i++) {
+  for (let i = 1; i < lengthOfProgression; i += 1) {
     progression[i] = progression[i - 1] + step;
   }
   return progression;
@@ -20,7 +20,7 @@ const setRandDotsInProgression = (progression) => {
 
 const getTryAnswer = (progression, fake) => {
   let result;
-  for (let i = 0; i < progression.length; i++) {
+  for (let i = 0; i < progression.length; i += 1) {
     if (progression[i] !== fake[i]) result = progression[i];
   }
   return result;
@@ -30,7 +30,7 @@ const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
   gameLogic.getRulesOfGame('What number is missing in the progression?');
-  for (let i = 0; i <= 2; i++) {
+  for (let i = 0; i <= 2; i += 1) {
     const progression = createProgression();
     const fakeProgression = setRandDotsInProgression(progression);
     gameLogic.sayQuestion([fakeProgression.join(' ')]);
