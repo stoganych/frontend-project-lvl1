@@ -14,6 +14,7 @@ brain-calc
 brain-even
 brain-gcd
 brain-progression
+brain-prime
 ```
 
 ### Rules of games
@@ -33,3 +34,7 @@ Search the grearest common divisor of two numbers and write the number in consol
 ## brain-progression
 
 Write the lost number in progression. if you have a right answer, there will be next progression and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
+
+## brain-prime
+
+Answer on question: is this number prime(yes/no)? if you have a right answer, there will be next question and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
