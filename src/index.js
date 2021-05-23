@@ -13,7 +13,10 @@ export const outputRules = (text) => console.log(text);
 export const sayQuestion = (arr) => console.log(`Question: ${arr.join(' ')}`);
 // use array in param
 
-export const getRandomInt = (num) => Math.floor(Math.random() * num);
+export const getRandomInt = (num, limit = 0) => {
+  if (limit) return Math.floor(Math.random() * (num - limit) + limit);
+  return Math.floor(Math.random() * num);
+};
 
 export const getLoseMessage = (yourAnswer, tryAnswer, userName) => {
   console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${tryAnswer}'`);
