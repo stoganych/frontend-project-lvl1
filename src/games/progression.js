@@ -29,7 +29,7 @@ const getTryAnswer = (progression, fake) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  gameLogic.outputRules('What number is missing in the progression?');
+  gameLogic.getRulesOfGame('What number is missing in the progression?');
   for (let i = 0; i <= 2; i++) {
     const progression = createProgression();
     const fakeProgression = setRandDotsInProgression(progression);

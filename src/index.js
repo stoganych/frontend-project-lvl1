@@ -9,7 +9,7 @@ export const welcomeUser = () => {
 
 export const sayHello = (userName) => console.log(`Hello, ${userName}!`);
 
-export const outputRules = (text) => console.log(text);
+export const getRulesOfGame = (text) => console.log(text);
 
 export const sayQuestion = (arr) => console.log(`Question: ${arr.join(' ')}`);
 // use array in param

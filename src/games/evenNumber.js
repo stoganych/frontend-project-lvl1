@@ -9,7 +9,7 @@ const getTryAnswer = (num) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  gameLogic.outputRules('Answer "yes" if the number is even, otherwise answer "no".');
+  gameLogic.getRulesOfGame('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i <= 2; i++) {
     const randomNum = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([randomNum]);

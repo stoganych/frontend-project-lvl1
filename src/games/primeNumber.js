@@ -13,7 +13,7 @@ const getTryAnswer = (num) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  gameLogic.outputRules('Answer "yes" if given number is prime. Otherwise answer "no".');
+  gameLogic.getRulesOfGame('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i <= 2; i++) {
     const randomNum = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([randomNum]);

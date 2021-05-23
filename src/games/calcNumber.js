@@ -6,7 +6,7 @@ const getRandomOperator = () => {
   return operators[Math.floor(Math.random() * 3)];
 };
 
-const solveTheExpression = (oper1, oper2, operand) => {
+const getTheResultOfExpression = (oper1, oper2, operand) => {
   let result;
   switch (operand) {
     case '+':
@@ -27,13 +27,13 @@ const solveTheExpression = (oper1, oper2, operand) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  gameLogic.outputRules('What is the result of the expression?');
+  gameLogic.getRulesOfGame('What is the result of the expression?');
   for (let i = 0; i <= 2; i++) {
     const firstOperand = gameLogic.getRandomInt(100);
     const secondOperand = gameLogic.getRandomInt(100);
     const operator = getRandomOperator();
     gameLogic.sayQuestion([firstOperand, operator, secondOperand]);
-    const expression = solveTheExpression(firstOperand, secondOperand, operator);
+    const expression = getTheResultOfExpression(firstOperand, secondOperand, operator);
     const answer = +readlineSync.question('Your answer: ');
     if (expression === answer) console.log('Correct!');
     else {

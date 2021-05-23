@@ -10,7 +10,7 @@ const getTGCD = (num1, num2) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  gameLogic.outputRules('Find the greatest common divisor of given numbers.');
+  gameLogic.getRulesOfGame('Find the greatest common divisor of given numbers.');
   for (let i = 0; i <= 2; i++) {
     const firstOperand = gameLogic.getRandomInt(100);
     const secondOperand = gameLogic.getRandomInt(100);
