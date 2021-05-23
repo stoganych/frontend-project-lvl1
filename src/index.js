@@ -21,7 +21,7 @@ export const getRandomInt = (num, limit = 0) => {
 
 export const getLoseMessage = (yourAnswer, tryAnswer, userName) => {
   console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${tryAnswer}'`);
-  return console.log(`Let's try again, ${userName}`);
+  return console.log(`Let's try again, ${userName}!`);
 };
 
 export const congratulateOn = (user) => console.log(`Congratulations, ${user}!`);
