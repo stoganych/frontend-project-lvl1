@@ -6,6 +6,13 @@ export const welcomeUser = () => {
   return userName;
 };
 
+export const sayHello = (userName) => console.log(`Hello, ${userName}!`);
+
 export const getRandomInt = () => Math.floor(Math.random() * 100);
+
+export const getLoseMessage = (yourAnswer, tryAnswer, userName) => {
+  console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${tryAnswer}'`);
+  return console.log(`Let's try again, ${userName}`);
+};
 
 export const congratulateOn = (user) => console.log(`Congratulations, ${user}!`);

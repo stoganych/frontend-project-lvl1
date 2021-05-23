@@ -8,7 +8,7 @@ const getTryAnswer = (num) => {
 
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
-  console.log(`Hello, ${userName}!`);
+  gameLogic.sayHello(userName);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i <= 2; i++) {
     const randomNum = gameLogic.getRandomInt();
@@ -17,8 +17,7 @@ const playGame = () => {
     if (randomNum % 2 === 0 && answer === 'yes') console.log('Correct!');
     else if (randomNum % 2 !== 0 && answer === 'no') console.log('Correct!');
     else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getTryAnswer(randomNum)}')`);
-      return console.log(`Let's try again, ${userName}`);
+      return gameLogic.getLoseMessage(answer, getTryAnswer(randomNum), userName);
     }
   }
   return gameLogic.congratulateOn(userName);
