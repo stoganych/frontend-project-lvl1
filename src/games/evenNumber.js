@@ -11,7 +11,7 @@ const playGame = () => {
   gameLogic.sayHello(userName);
   gameLogic.outputRules('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i <= 2; i++) {
-    const randomNum = gameLogic.getRandomInt();
+    const randomNum = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([randomNum]);
     const answer = readlineSync.question('Your answer: ');
     if (randomNum % 2 === 0 && answer === 'yes') console.log('Correct!');

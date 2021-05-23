@@ -12,8 +12,8 @@ const playGame = () => {
   gameLogic.sayHello(userName);
   gameLogic.outputRules('Find the greatest common divisor of given numbers.');
   for (let i = 0; i <= 2; i++) {
-    const firstOperand = gameLogic.getRandomInt();
-    const secondOperand = gameLogic.getRandomInt();
+    const firstOperand = gameLogic.getRandomInt(100);
+    const secondOperand = gameLogic.getRandomInt(100);
     gameLogic.sayQuestion([firstOperand, secondOperand]);
     const tryAnswer = getTGCD(firstOperand, secondOperand);
     const answer = +readlineSync.question('Your answer: ');
