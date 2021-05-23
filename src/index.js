@@ -8,6 +8,11 @@ export const welcomeUser = () => {
 
 export const sayHello = (userName) => console.log(`Hello, ${userName}!`);
 
+export const outputRules = (text) => console.log(text);
+
+export const sayQuestion = (arr) => console.log(`Question: ${arr.join(' ')}`);
+// use array in param
+
 export const getRandomInt = () => Math.floor(Math.random() * 100);
 
 export const getLoseMessage = (yourAnswer, tryAnswer, userName) => {

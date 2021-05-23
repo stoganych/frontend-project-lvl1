@@ -27,12 +27,12 @@ const solveTheExpression = (oper1, oper2, operand) => {
 const playGame = () => {
   const userName = gameLogic.welcomeUser();
   gameLogic.sayHello(userName);
-  console.log('What is the result of the expression?');
+  gameLogic.outputRules('What is the result of the expression?');
   for (let i = 0; i <= 2; i++) {
     const firstOperand = gameLogic.getRandomInt();
     const secondOperand = gameLogic.getRandomInt();
     const operator = getRandomOperator();
-    console.log(`Question: ${firstOperand} ${operator} ${secondOperand}`);
+    gameLogic.sayQuestion([firstOperand, operator, secondOperand]);
     const expression = solveTheExpression(firstOperand, secondOperand, operator);
     const answer = +readlineSync.question('Your answer: ');
     if (expression === answer) console.log('Correct!');
