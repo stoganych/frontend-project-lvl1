@@ -10,10 +10,16 @@
 
 ```sh
 make install
-brain-game 
+brain-calc
 brain-even
 ```
 
 ### Rule of game
 
+# brain-even
+
 Answer on question: is this number even? if you have a right answer, there will be next question and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
+
+# brian-calc
+
+You need to complete the expression. if you have a right answer, there will be next expression and so three times. After all right answers you will be congratulate on. If your answer is false, you'll try again.
